@@ -1,0 +1,34 @@
+create route and controller folders
+created server.js
+npm i nodemon -D
+routes - create specific routes, takes you where you want to go 
+controllers - create logic that handles the CRUD
+Express is set up on the server.js file
+installed morgan for debugging purposes
+--->1:25 into day 4 lesson
+--->req.body?
+--->app.use(express.json);
+--->app.use(express.urlencoded({ extended: false }));
+need the above two lines to make CRUD work they are parsing what we send back to the browser
+Postman is used to test api's 1:40 into video
+what CRUD action is use?
+--->1:38 explaining parsing data
+app.use? makes you use your routes
+nodemon server.js
+-----------------------Code in Box crashed my localhost, WHY????-------------------------
+// app.use(express.json);
+// app.use(express.urlencoded({ extended: false }));
+// app.use(logger(`dev`));
+localhost stopped working when I added the three codes above.
+This code is in the server.js file
+Solution======>>>>I FORGOT THE () in app.use(exress.json())
+-----------------------Code in Box crashed my localhost, WHY????-------------------------
+Used the createPlant function in Postman with mock data 1:40
+{
+    "name":"Test Plant",
+    "description":"Test description",
+    "image":"https://testimage.com/plant.png"
+}
+Post, body = raw, JSON
+Install JSON viewer extension for google chrome
+Put is how you update
